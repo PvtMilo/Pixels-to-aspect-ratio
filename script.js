@@ -28,7 +28,15 @@ function getValidResolution(promptMessage) {
     let calA = resolusiA / divisor;
     let calB = resolusiB / divisor;
     console.log(`Aspect Ratio: ${calA}:${calB}`);
+    const resultElement = document.getElementById('result');
+    resultElement.textContent = `Your Aspect Ratio is: ${calA}:${calB}`;
   }
+
+const pixelsAelement = document.getElementById('resA');
+pixelsAelement.textContent = `First resolution: ${resolusiA}`;
+
+const pixelsBelement = document.getElementById('resB');
+pixelsBelement.textContent = `Second resolution: ${resolusiB}`;
   
   // Call the function with the parsed inputs
   finalCal(resolusiA, resolusiB);
